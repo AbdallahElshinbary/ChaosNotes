@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ChaosNotes.Views.AboutUsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChaosNotes.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#1A1A1A">
+        <StackPanel Margin="10">
+            <Label Content="ABOUT US" Foreground="#f1f1f1" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+            <Label Content="WE ARE HACKERS, MOTHERF**KERS." Foreground="#fddf81" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+            <Label Content="OUR TEAM:" Foreground="#f1f1f1" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+
+            <Grid Margin="0,25,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Width="200" Orientation="Vertical">
+                    <Border BorderThickness="5" BorderBrush="#f1f1f1" Width="150" >
+                        <Image Source="/Images/1.jpg" Width="150" Height="150" Stretch="Fill" />
+                    </Border>
+                    <TextBlock Text="ABDALLAH ELSHINBARY" HorizontalAlignment="Center" TextAlignment="Center" Width="200" TextWrapping="Wrap" Foreground="#f1f1f1" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Width="200" Orientation="Vertical" Margin="0,130,0,0">
+                    <Border BorderThickness="5" BorderBrush="#f1f1f1" Width="150" >
+                        <Image Source="/Images/2.jpg" Width="150" Height="150" Stretch="Fill" />
+                    </Border>
+                    <TextBlock Text="ALI SOLIMAN" HorizontalAlignment="Center" TextAlignment="Center" Width="200" TextWrapping="Wrap" Foreground="#f1f1f1" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Width="200" Orientation="Vertical">
+                    <Border BorderThickness="5" BorderBrush="#f1f1f1" Width="150" >
+                        <Image Source="/Images/3.jpg" Width="150" Height="150" Stretch="Fill" />
+                    </Border>
+                    <TextBlock Text="ABDALLAH EL-NOTY" HorizontalAlignment="Center" TextAlignment="Center" Width="200" TextWrapping="Wrap" Foreground="#f1f1f1" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Width="200" Orientation="Vertical" Margin="0,130,0,0">
+                    <Border BorderThickness="5" BorderBrush="#f1f1f1" Width="150" >
+                        <Image Source="/Images/4.jpg" Width="150" Height="150" Stretch="Fill" />
+                    </Border>
+                    <TextBlock Text="ALI GHORAB" HorizontalAlignment="Center" TextAlignment="Center" Width="200" TextWrapping="Wrap" Foreground="#f1f1f1" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

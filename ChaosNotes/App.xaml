@@ -1,0 +1,40 @@
+﻿<Application x:Class="ChaosNotes.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ChaosNotes"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <!--Left menu buttons style-->
+        <Style x:Key="MainButtons" TargetType="Button">
+            <Setter Property="FontFamily" Value="/Fonts/CarterOne.ttf #Carter One" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="20px" />
+            <Setter Property="Background" Value="#5f3131" />
+            <Setter Property="Foreground" Value="#ffffff" />
+            <Setter Property="Height" Value="55px" />
+            <Setter Property="BorderThickness" Value="7,0,0,0" />
+            <Setter Property="BorderBrush" Value="#ffe082" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+        </Style>
+
+        <!--Circular button template-->
+        <ControlTemplate x:Key = "ButtonTemplate" TargetType = "Button">
+            <Grid>
+                <Ellipse x:Name = "ButtonEllipse" Fill="#efefef" />
+                <ContentPresenter Content = "{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </ControlTemplate>
+
+        <!--Helper buttons style-->
+        <Style x:Key="HelperButtons" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource ButtonTemplate}" />
+            <Setter Property="FontFamily" Value="/Fonts/CarterOne.ttf #Carter One" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="#3f2222" />
+        </Style>
+
+    </Application.Resources>
+</Application>
+
+

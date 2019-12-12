@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ChaosNotes.Views.GroupsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChaosNotes.Views"
+             xmlns:viewmodels="clr-namespace:ChaosNotes.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <StackPanel Orientation="Vertical" Background="#7f4141">
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,20">
+                <Label Content="YOUR NOTES" Foreground="#ffffff" FontSize="30px" FontFamily="/Fonts/CarterOne.ttf #Carter One" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <Button Width="40" Height="40" FontSize="40" Style="{StaticResource HelperButtons}" Click="addGroup">
+                    <TextBlock Text="+" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+            </StackPanel>
+
+            <ItemsControl ItemsSource="{Binding}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type viewmodels:GroupModel}">
+                        <StackPanel Width="200" Height="200" Orientation="Vertical" Margin="30,0,10,25">
+                            <StackPanel Tag="{Binding Id}" Height="150" Background="#ffe082" MouseLeftButtonDown="showGroupNotes">
+                                <Button Tag="{Binding Id}" Width="33" Height="33" Margin="0,7,7,0" FontSize="29" HorizontalAlignment="Right" Style="{StaticResource HelperButtons}" Click="deleteGroup">
+                                    <TextBlock Text="x" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Button>
+                            </StackPanel>
+                            <TextBox Width="200" Height="50" TextAlignment="Center"
+                                     VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                     Tag="{Binding Id}" Text="{Binding Title}" BorderThickness="0"
+                                     Foreground="#ffffff" Background="#bf9061" FontSize="25px"
+                                     FontFamily="/Fonts/CarterOne.ttf #Carter One" 
+                                     VerticalAlignment="Center" HorizontalAlignment="Center" KeyDown="editGroupTitle" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
